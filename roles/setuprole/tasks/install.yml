@@ -1,0 +1,11 @@
+---
+
+- name: install {{ package }}
+  apt:
+    name: "{{ package }}"
+    update_cache: yes
+    state: latest
+  become: true
+  notify: restart {{ package }}
+
+

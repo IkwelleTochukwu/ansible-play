@@ -1,0 +1,29 @@
+---
+
+
+ - name: install and set-up an apache server
+   hosts: webserver_apache
+   become: true
+   tasks:
+   - debug:
+       msg: "before we run our role"
+   - import_role: 
+       name: demoroles
+   - include_role: 
+       name: demoroles
+   - debug:
+       msg: "after we run our role"
+
+
+ - name: install and set-up a nginx server
+   hosts: webserver_nginx
+   become: true
+   tasks:
+   - debug:
+       msg: "before we run our role"
+   - import_role: 
+       name: setuprole
+   - include_role: 
+       name: setuprole
+   - debug:
+       msg: "after we run our roles"

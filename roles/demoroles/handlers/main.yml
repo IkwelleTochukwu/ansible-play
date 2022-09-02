@@ -1,0 +1,11 @@
+---
+# handlers file for demoroles
+
+
+- name: restart {{ package }}
+  service:
+    name: "{{ package }}"
+    state: restarted
+  listen: restarted package
+    
+

@@ -1,0 +1,8 @@
+---
+
+
+- name: starting {{ web_service }}
+  service:
+    name: "{{ web_service }}"
+    state: started
+  become: true

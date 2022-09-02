@@ -1,0 +1,7 @@
+---
+
+- name: send copy.html file
+  copy:
+    src: copy.html
+    dest: /home/ubuntu
+  become: true

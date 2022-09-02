@@ -1,0 +1,6 @@
+---
+# defaults file for setuprole
+
+
+package: nginx
+web_service: nginx
